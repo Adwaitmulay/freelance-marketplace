@@ -1,0 +1,680 @@
+/* basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+  font-family: Georgia, serif;
+  min-height: 100vh;
+}
+
+/* ========================
+   AUTH PAGES (login/signup)
+======================== */
+
+body.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-box {
+  background-color: #131313;
+  border: 1px solid #2a2a2a;
+  border-top: 4px solid #3b82f6;
+  border-radius: 10px;
+  padding: 40px 36px;
+  width: 100%;
+  max-width: 400px;
+  margin: 30px auto;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #3b82f6;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.tagline {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 22px;
+}
+
+/* role selection buttons */
+.role-select {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.role-btn {
+  flex: 1;
+  padding: 10px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #999;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: Georgia, serif;
+  transition: all 0.3s;
+}
+
+.role-btn.active {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+/* inputs */
+.auth-box input,
+.auth-box textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #eee;
+  font-size: 14px;
+  font-family: Georgia, serif;
+  margin-bottom: 14px;
+  outline: none;
+}
+
+.auth-box input:focus,
+.auth-box textarea:focus {
+  border-color: #3b82f6;
+}
+
+/* buttons */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: Georgia, serif;
+  transition: background-color 0.3s;
+  margin-bottom: 12px;
+}
+
+.submit-btn:hover {
+  background-color: #2563eb;
+}
+
+.error-msg {
+  color: #ff4444;
+  font-size: 13px;
+  text-align: center;
+  min-height: 18px;
+}
+
+.success-msg {
+  color: #22c55e;
+  font-size: 13px;
+  text-align: center;
+  min-height: 18px;
+}
+
+.switch-link {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.switch-link a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.switch-link a:hover {
+  text-decoration: underline;
+}
+
+/* ========================
+   NAVBAR (used across app pages)
+======================== */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 30px;
+  background-color: #131313;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-right a, .nav-right button {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: Georgia, serif;
+}
+
+.nav-right a:hover, .nav-right button:hover {
+  color: #3b82f6;
+}
+
+.nav-btn {
+  padding: 8px 18px;
+  background-color: #3b82f6;
+  color: white !important;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.nav-btn:hover {
+  background-color: #2563eb !important;
+}
+
+/* mobile nav adjustments */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 14px 16px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-right {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+
+/* ========================
+   PAGE WRAP (shared by app pages)
+======================== */
+
+.page-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.page-wrap h1 {
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.page-sub {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+/* form box used on post gig page */
+.form-box {
+  background-color: #131313;
+  border: 1px solid #2a2a2a;
+  border-left: 4px solid #3b82f6;
+  border-radius: 8px;
+  padding: 26px;
+  margin-bottom: 40px;
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #eee;
+  font-size: 14px;
+  font-family: Georgia, serif;
+  margin-bottom: 14px;
+  outline: none;
+}
+
+.form-box input:focus,
+.form-box select:focus,
+.form-box textarea:focus {
+  border-color: #3b82f6;
+}
+
+.form-box textarea {
+  resize: vertical;
+}
+
+/* my gigs section */
+.my-gigs h2 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.gig-card {
+  background-color: #131313;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gig-card-left h3 {
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.gig-card-left p {
+  font-size: 13px;
+  color: #888;
+}
+
+.gig-card-price {
+  font-size: 16px;
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+.gig-del-btn {
+  padding: 6px 14px;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: Georgia, serif;
+}
+
+.gig-del-btn:hover {
+  background-color: #aa0000;
+}
+
+.empty-msg {
+  color: #555;
+  font-size: 14px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ========================
+   BROWSE GIGS PAGE
+======================== */
+
+.search-filter-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.search-filter-box input {
+  flex: 2;
+  min-width: 200px;
+  padding: 12px 14px;
+  background-color: #131313;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  color: #eee;
+  font-size: 14px;
+  font-family: Georgia, serif;
+  outline: none;
+}
+
+.search-filter-box select {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px 14px;
+  background-color: #131313;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  color: #eee;
+  font-size: 14px;
+  font-family: Georgia, serif;
+  outline: none;
+}
+
+.search-filter-box input:focus,
+.search-filter-box select:focus {
+  border-color: #3b82f6;
+}
+
+.gigs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.browse-card {
+  background-color: #131313;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.browse-card:hover {
+  transform: translateY(-4px);
+  border-color: #3b82f6;
+}
+
+.browse-card .cat-tag {
+  display: inline-block;
+  background-color: #1a2b4d;
+  color: #3b82f6;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.browse-card h3 {
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.browse-card .gig-desc-preview {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.browse-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #222;
+  padding-top: 12px;
+}
+
+.browse-card .by-name {
+  font-size: 12px;
+  color: #777;
+}
+
+.browse-card .price-tag {
+  font-size: 16px;
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .gigs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================
+   FREELANCER PROFILE PAGE
+======================== */
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #131313;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 26px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.profile-avatar {
+  font-size: 50px;
+  width: 80px;
+  height: 80px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info h1 {
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.profile-skills {
+  font-size: 13px;
+  color: #3b82f6;
+  margin-bottom: 8px;
+}
+
+.profile-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.profile-rating span:first-child {
+  color: #f5c518;
+  letter-spacing: 2px;
+}
+
+.profile-rating span:last-child {
+  color: #888;
+  font-size: 12px;
+}
+
+.msg-btn {
+  padding: 10px 24px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: Georgia, serif;
+}
+
+.msg-btn:hover {
+  background-color: #2563eb;
+}
+
+.profile-section {
+  margin-bottom: 36px;
+}
+
+.profile-section h2 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.profile-section p {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+/* review cards */
+.review-card {
+  background-color: #131313;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin-bottom: 12px;
+}
+
+.review-card .review-stars {
+  color: #f5c518;
+  font-size: 14px;
+  margin-bottom: 6px;
+  letter-spacing: 2px;
+}
+
+.review-card .review-author {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.review-card .review-text {
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* review form */
+.review-form {
+  background-color: #131313;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.review-form h3 {
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.star-input {
+  font-size: 28px;
+  color: #555;
+  margin-bottom: 14px;
+  cursor: pointer;
+  letter-spacing: 4px;
+}
+
+.star-input span {
+  transition: color 0.2s;
+}
+
+.star-input span.filled {
+  color: #f5c518;
+}
+
+.review-form textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #eee;
+  font-size: 14px;
+  font-family: Georgia, serif;
+  margin-bottom: 12px;
+  outline: none;
+  resize: vertical;
+}
+
+/* ========================
+   MESSAGE POPUP OVERLAY
+======================== */
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.overlay.show {
+  display: flex;
+}
+
+.msg-popup {
+  background-color: #131313;
+  border: 1px solid #2a2a2a;
+  border-top: 4px solid #3b82f6;
+  border-radius: 10px;
+  padding: 26px;
+  max-width: 380px;
+  width: 90%;
+}
+
+.msg-popup h3 {
+  font-size: 17px;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.msg-popup textarea {
+  width: 100%;
+  padding: 12px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #eee;
+  font-size: 14px;
+  font-family: Georgia, serif;
+  margin-bottom: 14px;
+  outline: none;
+  resize: vertical;
+}
+
+.popup-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.popup-btns button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: Georgia, serif;
+  font-weight: bold;
+}
+
+.popup-btns button:first-child {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.popup-btns button:last-child {
+  background-color: #333;
+  color: #eee;
+}

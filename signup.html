@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up — SkillHive</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="auth-page">
+
+  <div class="auth-box">
+
+    <div class="logo">SkillHive</div>
+    <p class="tagline">Create your account</p>
+
+    <!-- role selection -->
+    <div class="role-select">
+      <button class="role-btn active" id="freelancerBtn" onclick="selectRole('freelancer')">I'm a Freelancer</button>
+      <button class="role-btn" id="clientBtn" onclick="selectRole('client')">I'm a Client</button>
+    </div>
+
+    <input type="text" id="suName" placeholder="Full Name" />
+    <input type="email" id="suEmail" placeholder="Email Address" />
+    <input type="password" id="suPassword" placeholder="Password" />
+
+    <!-- only shown for freelancers -->
+    <input type="text" id="suSkills" placeholder="Your Skills (eg: Web Design, Logo Design)" />
+
+    <button class="submit-btn" onclick="signupUser()">Create Account</button>
+
+    <p id="suError" class="error-msg"></p>
+    <p id="suSuccess" class="success-msg"></p>
+
+    <p class="switch-link">Already have an account? <a href="login.html">Login here</a></p>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

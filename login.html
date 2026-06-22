@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login — SkillHive</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="auth-page">
+
+  <div class="auth-box">
+
+    <div class="logo">SkillHive</div>
+    <p class="tagline">Welcome back</p>
+
+    <input type="email" id="loginEmail" placeholder="Email Address" />
+    <input type="password" id="loginPassword" placeholder="Password" />
+
+    <button class="submit-btn" onclick="loginUser()">Login</button>
+
+    <p id="loginError" class="error-msg"></p>
+
+    <p class="switch-link">Don't have an account? <a href="signup.html">Sign up here</a></p>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

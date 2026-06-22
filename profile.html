@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Freelancer Profile — SkillHive</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- navbar -->
+  <div class="navbar">
+    <div class="logo">SkillHive</div>
+    <div class="nav-right">
+      <a href="browse.html">Browse Gigs</a>
+      <a href="postgig.html">Post a Gig</a>
+      <a href="messages.html">Messages</a>
+      <button onclick="logoutUser()">Logout</button>
+    </div>
+  </div>
+
+  <div class="page-wrap">
+
+    <!-- profile header -->
+    <div class="profile-header">
+      <div class="profile-avatar">👤</div>
+      <div class="profile-info">
+        <h1 id="profName">Loading...</h1>
+        <p id="profSkills" class="profile-skills"></p>
+        <div class="profile-rating">
+          <span id="profStars">☆☆☆☆☆</span>
+          <span id="profRatingText">No reviews yet</span>
+        </div>
+      </div>
+      <button class="msg-btn" onclick="openMessageBox()">Message</button>
+    </div>
+
+    <!-- bio -->
+    <div class="profile-section">
+      <h2>About</h2>
+      <p id="profBio">This freelancer hasn't added a bio yet.</p>
+    </div>
+
+    <!-- their gigs -->
+    <div class="profile-section">
+      <h2>Gigs Offered</h2>
+      <div id="profGigsList" class="gigs-grid"></div>
+    </div>
+
+    <!-- reviews -->
+    <div class="profile-section">
+      <h2>Reviews</h2>
+      <div id="profReviewsList"></div>
+
+      <!-- leave a review -->
+      <div class="review-form">
+        <h3>Leave a Review</h3>
+        <div class="star-input" id="starInput">
+          <span data-val="1">☆</span>
+          <span data-val="2">☆</span>
+          <span data-val="3">☆</span>
+          <span data-val="4">☆</span>
+          <span data-val="5">☆</span>
+        </div>
+        <textarea id="reviewText" rows="3" placeholder="Write your review..."></textarea>
+        <button class="submit-btn" onclick="submitReview()">Submit Review</button>
+        <p id="reviewMsg" class="success-msg"></p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- message popup -->
+  <div class="overlay" id="msgOverlay">
+    <div class="msg-popup">
+      <h3 id="msgPopupTitle">Send a Message</h3>
+      <textarea id="quickMsgText" rows="4" placeholder="Type your message..."></textarea>
+      <div class="popup-btns">
+        <button onclick="sendQuickMessage()">Send</button>
+        <button onclick="closeMessageBox()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
