@@ -1,6 +1,5 @@
 # freelance-marketplace
 
-
 A freelance service marketplace website built using HTML, CSS and JavaScript.
 
 ## About
@@ -30,7 +29,7 @@ A platform connecting freelancers and clients for short-term work. Freelancers c
 - JavaScript
 
 ## Live Link
-https://adwaitmulay.github.io/skillhive/
+https://adwaitmulay.github.io/freelance-marketplace/
 
 ## Author
 Adwait Mulay & Ghratachi Rathore
