@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Messages — SkillHive</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- navbar -->
+  <div class="navbar">
+    <div class="logo">SkillHive</div>
+    <div class="nav-right">
+      <a href="browse.html">Browse Gigs</a>
+      <a href="postgig.html" id="postGigLink">Post a Gig</a>
+      <a href="messages.html">Messages</a>
+      <button onclick="logoutUser()">Logout</button>
+    </div>
+  </div>
+
+  <div class="page-wrap">
+
+    <h1>Messages</h1>
+    <p class="page-sub">All your conversations in one place</p>
+
+    <div class="messages-layout">
+
+      <!-- list of conversations -->
+      <div class="chat-list" id="chatList">
+        <!-- chat items go here -->
+      </div>
+
+      <!-- active chat window -->
+      <div class="chat-window" id="chatWindow">
+        <p class="empty-msg" id="noChatMsg">Select a conversation to start chatting.</p>
+
+        <div id="activeChatBox" style="display:none;">
+          <div class="chat-header">
+            <h3 id="chatWithName">Name</h3>
+          </div>
+
+          <div class="chat-messages" id="chatMessages">
+            <!-- messages go here -->
+          </div>
+
+          <div class="chat-input-box">
+            <input type="text" id="chatInput" placeholder="Type a message..." onkeypress="if(event.key=='Enter') sendChatMessage()" />
+            <button onclick="sendChatMessage()">Send</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
